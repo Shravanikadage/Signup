@@ -10,8 +10,14 @@ const app = express();
 const port = 3001;
 
 // Middleware
+app.use(cors(
+    {
+        origin: ["https://signup-client-beryl.vercel.app"],
+        methods: ["POST","GET"],
+        credentials: true
+    }
+));
 app.use(express.json());
-app.use(cors());
 
 // Multer storage configuration
 const storage = multer.diskStorage({
