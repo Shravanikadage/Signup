@@ -46,7 +46,7 @@ function Signup() {
     formData.append("profilePic", profilePic);
 
     axios
-      .post("http://localhost:3001/register", formData)
+      .post("https://signup-server-omega.vercel.app/register", formData)
       .then(() => {
         toast.success("Registration successful!");
         setTimeout(() => navigate("/login"), 2000);
